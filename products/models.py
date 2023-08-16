@@ -8,7 +8,7 @@ class Product(models.Model): #product_category
 
     #python 3
     def __str__(self):
-        return self.title
+        return 'Produto: '+ self.title + '  - Preço: ' + str(self.price)
     #python 2
-    def __unicode__(self):
-        return self.title
+    #def __unicode__(self):
+    #    return self.title
