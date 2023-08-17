@@ -1,1 +1,8 @@
-{{ qs }}
+<h1>Lista de Produtos e Preço</h1><br/>
+
+{% for obj in object_list %}
+
+{{ obj.title }}
+{{ ' - preço de venda: '}}
+{{ obj.price }} <br/>
+{% endfor%}
