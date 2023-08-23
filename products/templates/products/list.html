@@ -2,7 +2,9 @@
 
 {% for obj in object_list %}
 
-{{ obj.title }}
-{{ ' - preço de venda: '}}
+<h3>{{ obj.title }}</h3>
+<h4>{{ obj.description }}</h4> 
+{{ 'preço de venda: '}}
 {{ obj.price }} <br/>
+<br/>
 {% endfor%}

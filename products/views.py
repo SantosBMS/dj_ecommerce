@@ -1,8 +1,19 @@
 from django.http import Http404
+
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render, get_object_or_404
 
 from .models import Product
+
+class ProductFeaturedListView(ListView):
+    template_name = "products/list.html"
+    
+    def get_queryset(self, *args, **kwargs):
+        return Product.objects.featured()
+
+class ProductFeaturedDetailView(DetailView):
+    queryset = Product.objects.all().featured()
+    template_name = "products/featured-detail.html"
 
 #Class Based View
 class ProductListView(ListView):
