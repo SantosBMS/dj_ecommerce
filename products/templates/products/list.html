@@ -8,3 +8,7 @@
 {{ obj.price }} <br/>
 <br/>
 {% endfor%}
+
+{% for obj in object_list %}
+	<a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a><br/>
+{% endfor%}
