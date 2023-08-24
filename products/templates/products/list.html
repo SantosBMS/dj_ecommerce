@@ -1,3 +1,8 @@
+{% for obj in object_list %}
+	<a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a><br/>
+{% endfor%}
+
+<!--
 <h1>Lista de Produtos e Preço</h1><br/>
 
 {% for obj in object_list %}
@@ -7,8 +12,4 @@
 {{ 'preço de venda: '}}
 {{ obj.price }} <br/>
 <br/>
-{% endfor%}
-
-{% for obj in object_list %}
-	<a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a><br/>
-{% endfor%}
+{% endfor%} >!--
